@@ -3,7 +3,7 @@ export type PageName =
   | 'home' 
   | 'about' 
   | 'contact' 
-  | 'cases' 
+  | 'work' 
   | 'blog' 
   | 'faq';
 

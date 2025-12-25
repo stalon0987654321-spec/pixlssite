@@ -24,7 +24,7 @@ const HomePage: React.FC<NavProps> = ({ navigate }) => (
             Pixls is a digital agency helping brands thrive in the modern world through strategic design and cutting-edge development.
           </p>
           <div className="flex gap-4">
-            <Button onClick={() => navigate('cases')}>View Cases</Button>
+            <Button onClick={() => navigate('work')}>View Work</Button>
             <Button variant="outline" onClick={() => navigate('contact')}>Get in Touch</Button>
           </div>
         </div>
@@ -34,34 +34,38 @@ const HomePage: React.FC<NavProps> = ({ navigate }) => (
     {/* Marquee Section */}
     <InfiniteMarquee />
 
-    {/* Selected Cases */}
+    {/* Selected Works */}
     <section className="py-24 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <SectionHeading number="01" title="Selected Works" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           <CaseCard 
-            title="Fintech healthy app" 
+            title="Fintech Healthy App" 
             category="App Development" 
-            image="work/fintech-healthy-app.jpg" 
+            image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+            onClick={() => navigate('work')} 
           />
           <CaseCard 
-            title="Pixoo e-commerce" 
+            title="Pixoo E-commerce" 
             category="Web Design" 
-            image="work/pixoo-ecommerce.jpg" 
+            image="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000" 
+            onClick={() => navigate('work')}
           />
           <CaseCard 
-            title="world clock" 
-            category="Product Design" 
-            image="work/world-clock.jpg" 
+            title="World Clock" 
+            category="Utility Tool" 
+            image="https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&q=80&w=1000" 
+            onClick={() => navigate('work')}
           />
           <CaseCard 
-            title="crypto exchange App" 
+            title="Crypto Exchange App" 
             category="Web3" 
-            image="work/crypto-exchange-app.jpg" 
+            image="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=1000" 
+            onClick={() => navigate('work')}
           />
         </div>
         <div className="mt-16 text-center">
-          <Button variant="outline" onClick={() => navigate('cases')}>View All Projects</Button>
+          <Button variant="outline" onClick={() => navigate('work')}>View All Projects</Button>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -5,11 +6,12 @@ interface CaseCardProps {
   title: string;
   category: string;
   image: string;
+  onClick?: () => void;
   className?: string;
 }
 
-const CaseCard: React.FC<CaseCardProps> = ({ title, category, image, className = "" }) => (
-  <div className={`group relative cursor-pointer block overflow-hidden ${className}`}>
+const CaseCard: React.FC<CaseCardProps> = ({ title, category, image, onClick, className = "" }) => (
+  <div onClick={onClick} className={`group relative cursor-pointer block overflow-hidden ${className}`}>
     <div className="w-full aspect-[4/3] overflow-hidden mb-4 relative">
       <img 
         src={image} 

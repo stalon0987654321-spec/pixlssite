@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Camera, Gamepad2, Watch, Calendar, Bot, Check } from 'lucide-react';
 
@@ -25,7 +26,6 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-        // Submit to FormSubmit.co
         const response = await fetch("https://formsubmit.co/ajax/pixlswebpixlswebsoln@gmail.com", {
             method: "POST",
             headers: { 
@@ -64,52 +64,52 @@ const ContactPage: React.FC = () => {
            <div 
              onClick={() => toggleService('web-design')}
              className={`border ${selectedServices.includes('web-design') ? 'border-white bg-[#1a1a1a]' : 'border-[#2a2a2a]'} 
-             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a]`}
+             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a] group`}
            >
-              <svg className="w-14 h-14 mb-4 stroke-[#ccc] stroke-1 fill-none" viewBox="0 0 24 24">
+              <svg className="w-14 h-14 mb-4 stroke-[#ccc] stroke-1 fill-none group-hover:stroke-white transition-colors" viewBox="0 0 24 24">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
-              <span className="text-[#ccc] text-lg">Web Design</span>
+              <span className="text-[#ccc] text-lg group-hover:text-white transition-colors">Web Design</span>
            </div>
 
            {/* Development */}
            <div 
              onClick={() => toggleService('development')}
              className={`border ${selectedServices.includes('development') ? 'border-white bg-[#1a1a1a]' : 'border-[#2a2a2a]'} 
-             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a]`}
+             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a] group`}
            >
-              <svg className="w-14 h-14 mb-4 stroke-[#ccc] stroke-1 fill-none" viewBox="0 0 24 24">
+              <svg className="w-14 h-14 mb-4 stroke-[#ccc] stroke-1 fill-none group-hover:stroke-white transition-colors" viewBox="0 0 24 24">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="3" y1="9" x2="21" y2="9"></line>
                 <polyline points="8 13 6 15 8 17"></polyline>
                 <polyline points="16 13 18 15 16 17"></polyline>
               </svg>
-              <span className="text-[#ccc] text-lg">Development</span>
+              <span className="text-[#ccc] text-lg group-hover:text-white transition-colors">Development</span>
            </div>
 
            {/* Mobile App */}
            <div 
              onClick={() => toggleService('mobile-app')}
              className={`border ${selectedServices.includes('mobile-app') ? 'border-white bg-[#1a1a1a]' : 'border-[#2a2a2a]'} 
-             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a]`}
+             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a] group`}
            >
-              <svg className="w-14 h-14 mb-4 stroke-[#ccc] stroke-1 fill-none" viewBox="0 0 24 24">
+              <svg className="w-14 h-14 mb-4 stroke-[#ccc] stroke-1 fill-none group-hover:stroke-white transition-colors" viewBox="0 0 24 24">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                 <line x1="12" y1="18" x2="12" y2="18"></line>
               </svg>
-              <span className="text-[#ccc] text-lg">Mobile App</span>
+              <span className="text-[#ccc] text-lg group-hover:text-white transition-colors">Mobile App</span>
            </div>
 
            {/* AI Agents */}
            <div 
              onClick={() => toggleService('ai-agents')}
              className={`border ${selectedServices.includes('ai-agents') ? 'border-white bg-[#1a1a1a]' : 'border-[#2a2a2a]'} 
-             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a]`}
+             p-8 cursor-pointer transition-all duration-300 flex flex-col items-center justify-center h-[200px] hover:border-white hover:bg-[#1a1a1a] group`}
            >
-              <Bot className="w-14 h-14 mb-4 text-[#ccc] stroke-[1px]" />
-              <span className="text-[#ccc] text-lg">AI Agents</span>
+              <Bot className="w-14 h-14 mb-4 text-[#ccc] stroke-[1px] group-hover:text-white transition-colors" />
+              <span className="text-[#ccc] text-lg group-hover:text-white transition-colors">AI Agents</span>
            </div>
         </div>
 
@@ -154,13 +154,13 @@ const ContactPage: React.FC = () => {
                 <div className="my-16 text-center">
                    <p className="text-lg mb-8 text-gray-300">Please prove you are a human by selecting the <span className="text-[#e74c3c] font-bold">gamepad</span>.</p>
                    <div className="flex justify-center gap-10">
-                      <button onClick={() => handleCaptcha('camera', false)} className={`transition-opacity duration-300 focus:outline-none ${selectedCaptcha === 'camera' ? 'opacity-100 text-white' : 'opacity-40 hover:opacity-100 text-white'}`}>
+                      <button onClick={() => handleCaptcha('camera', false)} className={`transition-all duration-300 focus:outline-none ${selectedCaptcha === 'camera' ? 'opacity-100 text-white scale-110' : 'opacity-40 hover:opacity-100 text-white'}`}>
                         <Camera size={32} />
                       </button>
-                      <button onClick={() => handleCaptcha('watch', false)} className={`transition-opacity duration-300 focus:outline-none ${selectedCaptcha === 'watch' ? 'opacity-100 text-white' : 'opacity-40 hover:opacity-100 text-white'}`}>
+                      <button onClick={() => handleCaptcha('watch', false)} className={`transition-all duration-300 focus:outline-none ${selectedCaptcha === 'watch' ? 'opacity-100 text-white scale-110' : 'opacity-40 hover:opacity-100 text-white'}`}>
                         <Watch size={32} />
                       </button>
-                      <button onClick={() => handleCaptcha('gamepad', true)} className={`transition-opacity duration-300 focus:outline-none ${selectedCaptcha === 'gamepad' ? 'opacity-100 text-[#e74c3c]' : 'opacity-40 hover:opacity-100 text-white'}`}>
+                      <button onClick={() => handleCaptcha('gamepad', true)} className={`transition-all duration-300 focus:outline-none ${selectedCaptcha === 'gamepad' ? 'opacity-100 text-[#e74c3c] scale-110' : 'opacity-40 hover:opacity-100 text-white'}`}>
                         <Gamepad2 size={32} />
                       </button>
                    </div>
@@ -182,13 +182,13 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <a 
-                    href="https://calendly.com" 
+                    href="https://cal.com/pixlswebsoln/service" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-white border border-gray-700 px-8 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 group"
                   >
                     <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    <span>Book a meeting via Calendly</span>
+                    <span>Book a meeting</span>
                   </a>
                 </div>
               </>
